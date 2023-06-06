@@ -70,36 +70,37 @@
 //      * 4 
 //      */
     
-      $planetasg=["mercurio"=>0.78,
-      "venus"=>0.87,
-      "marte"=>0.72,
-      "jupiter"=>2.88,
-      "saturno"=>.05,
-      "urano"=>0.77,
-      "neptuno"=>11];
+    //   $planetasg=["mercurio"=>0.78,
+    //   "venus"=>0.87,
+    //   "marte"=>0.72,
+    //   "jupiter"=>2.88,
+    //   "saturno"=>.05,
+    //   "urano"=>0.77,
+    //   "neptuno"=>11];
 
-      function calcularGravedadReal($gravedadRelativa) {
-        $gravedadTierra = 9.8;
-        $gravedadReal = $gravedadRelativa * $gravedadTierra;
-        return $gravedadReal;
-    };
+    //   function calcularGravedadReal($gravedadRelativa) {
+    //     $gravedadTierra = 9.8;
+    //     $gravedadReal = $gravedadRelativa * $gravedadTierra;
+    //     return $gravedadReal;
+    // };
 
-    $gravedad=array_values($planetasg);
+    // $gravedad=array_values($planetasg);
    
 
       
 
 // /**
-//  * 5 incompleto
+//  * 5 
 //  */
-// $navesm=["nave1"=>100,
-// "nave2"=>150,
-// "nave3"=>300,
-// "nave4"=>450,
-// ];
+ $navesm=["nave1"=>100,
+ "nave2"=>150,
+ "nave3"=>350,
+ "nave4"=>450,
+ ];
 
-// $navesn=array_flip($navesm);
-// print_r($navesn);
+ $navesn=array_values($navesm);
+
+
 
 // /**
 //  * 6
@@ -164,14 +165,9 @@
 
 <div class="mb-3 border border-success rounded p-5"> 
 
-  <h3><?php for ($i=0; $i < count($gravedad) ; $i++) { 
+  <h3><?php 
     
-    $gravedadrl = calcularGravedadReal($gravedad[$i]);
-    echo "la gravedad real de la  ",$i+1," es:";
-          echo $gravedadrl,"\n";
-          echo"<br>";
-  }
-  
+    echo"la masa total de todas las naves es: ", array_sum($navesn)
 
      ?></h3>
      <!-- echo $respuesta -->
