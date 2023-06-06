@@ -44,40 +44,53 @@
 //       * 3
 //       */
 
-      $planetas3= ["mercurio"=>false,
-      "venus"=>false,
-      "tierra"=>true,
-      "marte"=>true,
-      "jupiter"=>false,
-      "saturno"=>true,
-      "urano"=>false,
-      "neptuno"=>false];
-      function true($pla){
-        if($pla==true);
-        return $pla;
-      };
-    $habitados=(array_filter($planetas3,"true")); 
-      print_r($habitados); 
-      $habitados = array_keys($habitados);
+    //   $planetas3= ["mercurio"=>false,
+    //   "venus"=>false,
+    //   "tierra"=>true,
+    //   "marte"=>true,
+    //   "jupiter"=>false,
+    //   "saturno"=>true,
+    //   "urano"=>false,
+    //   "neptuno"=>false];
+    //   function true($pla){
+    //     if($pla==true);
+    //     return $pla;
+    //   };
+    // $habitados=(array_filter($planetas3,"true")); 
+    //   print_r($habitados); 
+    //   $habitados = array_keys($habitados);
 
-      if (in_array($_POST['nPlaneta'],$habitados)){
-        $respuesta = "si es habitado ".$_POST['nPlaneta'] ;
-    }else{
-        $respuesta = "no habitado";
-    }; 
+    //   if (in_array($_POST['nPlaneta'],$habitados)){
+    //     $respuesta = "si es habitado ".$_POST['nPlaneta'] ;
+    // }else{
+    //     $respuesta = "no habitado";
+    // }; 
       
 //     /**
-//      * 4 esta incompleto
+//      * 4 
 //      */
     
-//      $planetasg=["mercurio"=>2.78,
-//      "venus"=>8.87,
-//      "tierra"=>9.78,
-//      "marte"=>3.72,
-//      "jupiter"=>22.88,
-//      "saturno"=>9.05,
-//      "urano"=>7.77,
-//      "neptuno"=>11];
+      $planetasg=["mercurio"=>0.78,
+      "venus"=>0.87,
+      "marte"=>0.72,
+      "jupiter"=>2.88,
+      "saturno"=>.05,
+      "urano"=>0.77,
+      "neptuno"=>11];
+
+      function calcularGravedadReal($gravedadRelativa) {
+        $gravedadTierra = 9.8;
+        $gravedadReal = $gravedadRelativa * $gravedadTierra;
+        return $gravedadReal;
+    };
+
+    $gravedad=array_values($planetasg);
+    print_r($gravedad);
+    
+    function mostrarPlaneta(){
+
+    }
+
       
 
 // /**
@@ -154,12 +167,17 @@
 </form><br><br>
 <div class="mb-3 border border-success rounded p-5"> 
 
-    <h3><?php for ($i=0; $i < count($habitados) ; $i++) { 
-            echo $habitados[$i],"\n";
+  <h3><?php for ($i=0; $i < count($gravedad) ; $i++) { 
+    
+    $gravedadrl = calcularGravedadReal($gravedad[$i]);
+    echo "la gravedad real de la  ",$i+1," es:";
+          echo $gravedadrl,"\n";
+          echo"<br>";
+  }
+  
 
-    } 
-    echo"<br>";
-    echo $respuesta ?></h3>
-</div>
+     ?></h3>
+     <!-- echo $respuesta -->
+  </div>
 </body>
 </html>
