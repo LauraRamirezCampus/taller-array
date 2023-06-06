@@ -146,10 +146,18 @@
 //  */
 
 
-  $alienigenas=["marsay","ventus","jupis","saturti","marsay","jupis","ventus"];
-  $alienigenasn=array_unique($alienigenas);
-  
-  
+//   $alienigenas=["marsay","ventus","jupis","saturti","marsay","jupis","ventus"];
+//   $alienigenasn=array_unique($alienigenas);
+
+/**
+ * 10
+ */
+
+ $planetas1=["mercurio","venus","tierra","marte",];
+ $planetas2=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
+
+
+ $comunes=array_intersect($planetas1,$planetas2);
  
 ?>
 
@@ -168,7 +176,7 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">Alienigenas sin duplicarse:</label>
+    <label for="exampleInputEmail1" class="form-label">Planetas comunes en los dos sistemas solares:</label>
     <!-- <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero"> -->
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
@@ -177,8 +185,8 @@
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php
-  for ($i=0; $i < count($alienigenasn) ; $i++) { 
-            echo $alienigenasn[$i]."\n";
+  for ($i=0; $i < count($comunes) ; $i++) { 
+            echo $comunes[$i]."\n";
 
     } ;
    
