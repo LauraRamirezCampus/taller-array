@@ -85,11 +85,7 @@
     };
 
     $gravedad=array_values($planetasg);
-    print_r($gravedad);
-    
-    function mostrarPlaneta(){
-
-    }
+   
 
       
 
@@ -159,12 +155,12 @@
 </head>
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
-  <div class="mb-3 border border-success rounded p-5 "  >
+  <!-- <div class="mb-3 border border-success rounded p-5 "  >
     <label for="exampleInputEmail1" class="form-label">ingrese el planeta a verificar:</label>
     <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero">
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
-</form><br><br>
+</form><br><br> --> 
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php for ($i=0; $i < count($gravedad) ; $i++) { 
