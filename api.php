@@ -105,26 +105,26 @@
 // /**
 //  * 6
 //  */
- $planetas6=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
- if (in_array($_POST['nPlaneta'],$planetas6)){
-     $respuesta="si existe ".$_POST['nPlaneta'];
- }else{
-  $respuesta="no existe";
- };
+//  $planetas6=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
+//  if (in_array($_POST['nPlaneta'],$planetas6)){
+//      $respuesta="si existe ".$_POST['nPlaneta'];
+//  }else{
+//   $respuesta="no existe";
+//  };
 
 // /**
 //  * 7
 //  */
-// $naves7=["nave1",
-// "nave2",
-// "nave3",
-// "nave4",
-// ];
-// if (in_array("nave1",$naves7)){
-//     echo"si existe nave1";
-// }else{
-//     echo"no existe";
-// };
+ $naves7=["nave1",
+ "nave2",
+ "nave3",
+ "nave4",
+ ];
+ if (in_array($_POST['nPlaneta'],$naves7)){
+    $respuesta="si existe ".$_POST['nPlaneta'];
+ }else{
+    $respuesta="no existe ".$_POST['nPlaneta'];
+ };
 
 // /**
 //  * 8
@@ -157,7 +157,7 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">ingrese el planeta a verificar:</label>
+    <label for="exampleInputEmail1" class="form-label">ingrese la nave a verificar:</label>
     <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero">
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
