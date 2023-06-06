@@ -149,6 +149,7 @@
   $alienigenas=["marsay","ventus","jupis","saturti","marsay","jupis","ventus"];
   $alienigenasn=array_unique($alienigenas);
   
+  
  
 ?>
 
