@@ -1,5 +1,6 @@
 <?php
-    $planetas= ["sol"=>0,
+   /*  $planetas= ["sol"=>0,
+
             "mercurio"=>1,
                 "venus"=>2,
                 "tierra"=>3,
@@ -14,13 +15,31 @@
         $respuesta = "si existe ".array_search($_POST['nPlaneta'],$planetas) ;
     }else{
         $respuesta = "no existe";
-    };
+    }; */
+
+
+
+
+
     
 
 //     /**
-//      * 2 no
+
+
+
+//      * 2 
 //      */
 
+        $planetas=["1"=>"deshabilitado",
+                    "2"=>"deshabilitado",
+                    "3"=>"deshabilitado",
+                    "4"=>"deshabilitado",
+                    "5"=>"deshabilitado",
+                    "6"=>"habilitado",
+                ];
+    
+                
+                $respuesta=$planetas[$_POST['nPlaneta']];
 //      /**
 //       * 3
 //       */
