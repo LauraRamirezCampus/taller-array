@@ -115,23 +115,31 @@
 // /**
 //  * 7
 //  */
- $naves7=["nave1",
- "nave2",
- "nave3",
- "nave4",
- ];
- if (in_array($_POST['nPlaneta'],$naves7)){
-    $respuesta="si existe ".$_POST['nPlaneta'];
- }else{
-    $respuesta="no existe ".$_POST['nPlaneta'];
- };
+//  $naves7=["nave1",
+//  "nave2",
+//  "nave3",
+//  "nave4",
+//  ];
+//  if (in_array($_POST['nPlaneta'],$naves7)){
+//     $respuesta="si existe ".$_POST['nPlaneta'];
+//  }else{
+//     $respuesta="no existe ".$_POST['nPlaneta'];
+//  };
 
 // /**
 //  * 8
 //  */
-// $planetas8=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
-// echo"<br>";
-// print_r(array_rand($planetas));
+$planetas= ["sol"=>0,
+
+"mercurio"=>1,
+    "venus"=>2,
+    "tierra"=>3,
+    "marte"=>4,
+    "jupiter"=>5,
+    "saturno"=>6,
+    "urano"=>7,
+    "neptuno"=>8];
+
 
 // /**
 //  * 9
@@ -157,8 +165,8 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">ingrese la nave a verificar:</label>
-    <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero">
+    <label for="exampleInputEmail1" class="form-label">planeta aleatorio:</label>
+    <!-- <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero"> -->
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
 </form><br><br> 
@@ -166,7 +174,7 @@
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php 
-    echo $respuesta;
+    echo array_rand($planetas);
    
 
      ?></h3>
