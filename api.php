@@ -30,7 +30,7 @@
 //      * 2 
 //      */
 
-        $planetas=["1"=>"deshabilitado",
+        /* $planetas=["1"=>"deshabilitado",
                     "2"=>"deshabilitado",
                     "3"=>"deshabilitado",
                     "4"=>"deshabilitado",
@@ -39,29 +39,32 @@
                 ];
     
                 
-                $respuesta=$planetas[$_POST['nPlaneta']];
+                $respuesta=$planetas[$_POST['nPlaneta']]; */
 //      /**
 //       * 3
 //       */
-                    
-//       $planetas3= ["mercurio"=>false,
-//       "venus"=>false,
-//       "tierra"=>true,
-//       "marte"=>true,
-//       "jupiter"=>false,
-//       "saturno"=>true,
-//       "urano"=>false,
-//       "neptuno"=>false];
 
-//       function true($pla){
-//         if($pla==true);
-//         return $pla;
-//       };
+      $planetas3= ["mercurio"=>false,
+      "venus"=>false,
+      "tierra"=>true,
+      "marte"=>true,
+      "jupiter"=>false,
+      "saturno"=>true,
+      "urano"=>false,
+      "neptuno"=>false];
+      function true($pla){
+        if($pla==true);
+        return $pla;
+      };
+    $habitados=(array_filter($planetas3,"true")); 
+      print_r($habitados); 
+      $habitados = array_keys($habitados);
 
-
-//     $habitados=(array_filter($planetas3,"true"));
-      
-//       print_r($habitados); 
+      if (in_array($_POST['nPlaneta'],$habitados)){
+        $respuesta = "si es habitado ".$_POST['nPlaneta'] ;
+    }else{
+        $respuesta = "no habitado";
+    }; 
       
 //     /**
 //      * 4 esta incompleto
@@ -144,13 +147,19 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
   <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">numero de planeta</label>
+    <label for="exampleInputEmail1" class="form-label">ingrese el planeta a verificar:</label>
     <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero">
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
 </form><br><br>
 <div class="mb-3 border border-success rounded p-5"> 
-    <h3><?php echo $respuesta; ?></h3>
+
+    <h3><?php for ($i=0; $i < count($habitados) ; $i++) { 
+            echo $habitados[$i],"\n";
+
+    } 
+    echo"<br>";
+    echo $respuesta ?></h3>
 </div>
 </body>
 </html>
