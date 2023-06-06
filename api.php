@@ -161,6 +161,7 @@
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
 </form><br><br> --> 
+
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php for ($i=0; $i < count($gravedad) ; $i++) { 
