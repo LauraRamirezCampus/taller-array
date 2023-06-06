@@ -129,16 +129,16 @@
 // /**
 //  * 8
 //  */
-$planetas= ["sol"=>0,
+// $planetas= ["sol"=>0,
 
-"mercurio"=>1,
-    "venus"=>2,
-    "tierra"=>3,
-    "marte"=>4,
-    "jupiter"=>5,
-    "saturno"=>6,
-    "urano"=>7,
-    "neptuno"=>8];
+// "mercurio"=>1,
+//     "venus"=>2,
+//     "tierra"=>3,
+//     "marte"=>4,
+//     "jupiter"=>5,
+//     "saturno"=>6,
+//     "urano"=>7,
+//     "neptuno"=>8];
 
 
 // /**
@@ -146,7 +146,9 @@ $planetas= ["sol"=>0,
 //  */
 
 
-//  $alienigenas=["marsay","ventus","jupis","saturti"];
+  $alienigenas=["marsay","ventus","jupis","saturti","marsay","jupis","ventus"];
+  $alienigenasn=array_unique($alienigenas);
+  
  
 ?>
 
@@ -165,7 +167,7 @@ $planetas= ["sol"=>0,
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">planeta aleatorio:</label>
+    <label for="exampleInputEmail1" class="form-label">Alienigenas sin duplicarse:</label>
     <!-- <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero"> -->
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
@@ -173,8 +175,11 @@ $planetas= ["sol"=>0,
 
 <div class="mb-3 border border-success rounded p-5"> 
 
-  <h3><?php 
-    echo array_rand($planetas);
+  <h3><?php
+  for ($i=0; $i < count($alienigenasn) ; $i++) { 
+            echo $alienigenasn[$i]."\n";
+
+    } ;
    
 
      ?></h3>
