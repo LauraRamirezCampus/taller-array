@@ -153,11 +153,13 @@
  * 10
  */
 
- $planetas1=["mercurio","venus","tierra","marte",];
- $planetas2=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
+ $planetas1=["mercurio","venus","tierra","marte","urano","neptuno"];
+ $planetas2=["mercurio","venus","tierra","marte","jupiter","saturno"];
 
 
- $comunes=array_intersect($planetas1,$planetas2);
+ $unico=array_diff($planetas1,$planetas2);
+ $unico2=array_diff($planetas2,$planetas1);
+ 
  
 ?>
 
@@ -176,7 +178,7 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">Planetas comunes en los dos sistemas solares:</label>
+    <label for="exampleInputEmail1" class="form-label">Planetas unicos en el primer sistema solar:</label>
     <!-- <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero"> -->
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
@@ -185,8 +187,11 @@
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php
-  for ($i=0; $i < count($comunes) ; $i++) { 
-            echo $comunes[$i]."\n";
+  for ($i=4; $i < count($planetas1) ; $i++) { 
+            echo $unico[$i]."\n";
+            
+           
+            echo $unico2[$i]."\n";
 
     } ;
    
