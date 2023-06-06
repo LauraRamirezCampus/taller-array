@@ -92,25 +92,25 @@
 // /**
 //  * 5 
 //  */
- $navesm=["nave1"=>100,
- "nave2"=>150,
- "nave3"=>350,
- "nave4"=>450,
- ];
+//  $navesm=["nave1"=>100,
+//  "nave2"=>150,
+//  "nave3"=>350,
+//  "nave4"=>450,
+//  ];
 
- $navesn=array_values($navesm);
+//  $navesn=array_values($navesm);
 
 
 
 // /**
 //  * 6
 //  */
-// $planetas6=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
-// if (in_array("venus",$planetas6)){
-//     echo"si existe venus";
-// }else{
-//     echo"no existe";
-// };
+ $planetas6=["mercurio","venus","tierra","marte","jupiter","saturno","urano","neptuno"];
+ if (in_array($_POST['nPlaneta'],$planetas6)){
+     $respuesta="si existe ".$_POST['nPlaneta'];
+ }else{
+  $respuesta="no existe";
+ };
 
 // /**
 //  * 7
@@ -156,18 +156,18 @@
 </head>
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
-  <!-- <div class="mb-3 border border-success rounded p-5 "  >
+   <div class="mb-3 border border-success rounded p-5 "  >
     <label for="exampleInputEmail1" class="form-label">ingrese el planeta a verificar:</label>
     <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero">
     <input type="submit" class="btn btn-info" value="Enviar">
   </div>
-</form><br><br> --> 
+</form><br><br> 
 
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php 
-    
-    echo"la masa total de todas las naves es: ", array_sum($navesn)
+    echo $respuesta;
+   
 
      ?></h3>
      <!-- echo $respuesta -->
