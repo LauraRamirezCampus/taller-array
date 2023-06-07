@@ -150,7 +150,7 @@
 //   $alienigenasn=array_unique($alienigenas);
 
 /**
- * 10
+ * 11
  */
 
  $planetas1=["mercurio","venus","tierra","marte","urano","neptuno"];
@@ -178,23 +178,36 @@
 <body class="d-flex justify-content-center align-items-center " style = "height: 800px;">
 <form method="POST" class="w-25">
    <div class="mb-3 border border-success rounded p-5 "  >
-    <label for="exampleInputEmail1" class="form-label">Planetas unicos en el primer sistema solar:</label>
+    <label for="exampleInputEmail1" class="form-label">Planetas unicos en el  sistema solar:</label>
     <!-- <input type="text" class="form-control" name="nPlaneta" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="numero"> -->
-    <input type="submit" class="btn btn-info" value="Enviar">
+    <!-- <input type="submit" class="btn btn-info" value="Enviar"> -->
   </div>
 </form><br><br> 
 
 <div class="mb-3 border border-success rounded p-5"> 
 
   <h3><?php
+  echo "Planetas unicos en el primer sistema solar: \n";
+  echo"<br>";
   for ($i=4; $i < count($planetas1) ; $i++) { 
             echo $unico[$i]."\n";
             
            
-            echo $unico2[$i]."\n";
+            
+        } ;
+        echo"<br><br>";
 
-    } ;
-   
+        echo "Planetas unicos en el segundo  sistema solar: \n";
+  echo"<br>";
+
+        for ($i=0; $i < count($planetas2) ; $i++) { 
+            
+            
+           
+            echo $unico2[$i]."\n";
+            
+        } ;
+        
 
      ?></h3>
      <!-- echo $respuesta -->
